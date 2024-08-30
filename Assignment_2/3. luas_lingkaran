@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int area(int x, int y) {
+	int area = x * y;
+	return area ;
+}
+
+int circumference(int x, int y) {
+	int circumference = x*2 + y*2;
+	return circumference;
+}
+
+int main() {
+    int x, y;
+	cout << "masukkan angka sisi pertama : ";
+	cin >> x;
+	cout << "masukkan angka sisi kedua : ";
+	cin >> y;
+	cout << "luas dari persegi panjangmu adalah " << area(x, y) << endl;
+	cout << "keliling dari persegi panjangmu adalah " << circumference(x, y) << endl;
+}
+
+
