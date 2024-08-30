@@ -6,5 +6,5 @@ int main()
 {
     cout << "Hallo namamu siapa ya? ";
     cin >> x;
-    cout << "wahhh nama kamu keren banget ^_^" << x;
+    cout << "wahhh nama kamu keren banget ^_^ " << x;
 }
