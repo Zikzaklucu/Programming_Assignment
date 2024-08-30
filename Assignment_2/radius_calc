@@ -1,0 +1,13 @@
+#include <bits/stdc++.h>
+using namespace std;
+float constant = 4.0 / 3.0;
+float pi = 3.1419;
+
+int main (){
+    float r;
+    cout << "type a radius: ";
+    cin >> r;
+    float v = constant * pi * pow(r, 3);
+    cout << "your volume is: " << v;
+    return 0;
+}
