@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int jam1, menit1, detik1;
+    int jam2, menit2, detik2;
+    int tot_detik1, tot_detik2;
+    int jam_total, menit_total, detik_total;
+
+    // waktu perjalanan pertama
+    cout << "berapa jam perjalanan pertama anda? "; cin >> jam1;
+    cout << "berapa menit perjalanan pertama anda? "; cin >> menit1;
+    cout << "berapa detik perjalanan pertama anda? "; cin >> detik1;
+
+    // waktu perjalanan kedua
+    cout << "berapa jam perjalanan kedua anda? "; cin >> jam2;
+    cout << "berapa menit perjalanan kedua anda? "; cin >> menit2;
+    cout << "berapa detik perjalanan kedua anda? "; cin >> detik2;
+
+    // total detik perjalanan pertama
+    tot_detik1 = (jam1 * 3600) + (menit1 * 60) + detik1;
+
+    // total detik perjalanan kedua
+    tot_detik2 = (jam2 * 3600) + (menit2 * 60) + detik2;
+
+    // total detik untuk kedua perjalanan
+    int sel_detik = abs(tot_detik1 - tot_detik2);
+
+    // mengubah total detik menjadi jam -> menit -> detik
+    jam_total = sel_detik / 3600; sel_detik %= 3600;
+    menit_total = sel_detik / 60; sel_detik %= 60;
+    detik_total = sel_detik;
+    
+    cout << "Total waktu perjalanan: " << jam_total << " jam " << menit_total << " menit " << detik_total << " detik" << endl;
+
+    return 0;
+}
+
