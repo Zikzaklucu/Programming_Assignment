@@ -1,0 +1,13 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int a, b;
+    cout << "masukkan nilai a "; cin >> a;
+    cout << "masukkan nilai b "; cin >> b;
+    a = a + b;
+    b = a - b;
+    a = a - b;
+    cout << "nilai a sekarang adalah " << a << endl;
+    cout << "nilai b sekarang adalah " << b << endl;
+}
