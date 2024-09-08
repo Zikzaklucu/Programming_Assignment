@@ -1,0 +1,13 @@
+#include <bits/stdc++.h>
+using namespace std;
+int tot_detik, jam, menit, detik;
+
+int main()
+{
+    cout << "berapa total detik dari perjalanan anda? "; cin >> tot_detik;
+    jam = tot_detik / 3600; menit = (tot_detik-(jam*3600))/60; detik = (tot_detik-(jam*3600)-(menit*60));
+    cout << "jadi perjalan anda menempuh " << jam << " jam, " << menit << " menit," << "dan " << detik << " detik";
+    
+    return 0;
+}
+
