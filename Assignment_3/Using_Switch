@@ -1,0 +1,34 @@
+#include <bits/stdc++.h>
+using namespace std;
+int lembur, gol, gaji;
+
+int main() {
+    
+    // input 
+    cout << "kamu lembur berapa jam bro? "; cin >> lembur;
+    cout << "kamu masuk golongan berapa bro? "; cin >> gol;
+    
+    if (lembur > 50) {
+        switch (gol) {
+            case 1:
+                gaji = 10000000 + (lembur * 10000);
+                cout << "gaji total anda Rp. " << gaji;
+                break;
+            case 2:
+                gaji = 20000000 + (lembur * 20000);
+                cout << "gaji total anda Rp. " << gaji;
+                break;
+            case 3:
+                gaji = 30000000 + (lembur * 30000);
+                cout << "gaji total anda Rp. " << gaji;
+                break;
+            default:
+                cout << "Golongan anda tidak valid";
+                return 1;
+        }
+    }
+    else {
+        cout << "anda tidak mendapatkan gaji lembur bro :(";
+    }
+    return 0;
+}
