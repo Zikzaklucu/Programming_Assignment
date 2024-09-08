@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+using namespace std;
+int bln, thn ;
+
+    // logika pengecekan apakah suatu tahun kabisat atau bukan
+bool kabisat(int thn) {
+        return (thn % 4 == 0 && thn % 100 != 0) || thn % 400 == 0;
+    }
+    
+int Hari(int bln, int thn) {
+        // kasus khusus February, dimana jika tahun kabisat akan mereturn 29, dan 28 jika tidak kabisat
+    if (bln == 2) { 
+        if (kabisat(thn)) {
+            return 29;
+        } else {
+            return 28;
+        }
+        // kasus April, June, September, November yang memiliki 30 hari
+    } else if (bln == 4 || bln == 6 || bln == 9 || bln == 11) { 
+        return 30;
+    } else {
+        // kasus selain bulan di atas yang pasti 31 hari
+        return 31;
+    }
+}
+    
+int main(){
+    
+    // input
+    cout << "masukkan bulan berapa yang ingin di cek : "; cin >> bln;
+    cout << "masukkan tahun berapa yang ingin di cek : "; cin >> thn;
+
+    // output
+    cout << "Dalam bulan tersebut ada " << Hari(bln, thn) << " hari" << endl;
+
+    return 0;
+    
+}
+
